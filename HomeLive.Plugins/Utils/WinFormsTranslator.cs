@@ -101,7 +101,7 @@ public static class WinFormsTranslator
         }
         
         var txt = (string?)Properties.Resources.ResourceManager.GetObject(file.Replace('-', '_'));
-        return txt is null ? [] : txt.Split("\r\n");
+        return txt is null ? [] : txt.Split("\n");
     }
 
     private static IEnumerable<object> GetTranslatableControls(Control f)
